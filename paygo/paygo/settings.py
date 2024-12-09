@@ -110,15 +110,25 @@ DATABASES = {
 
 
 ## Email settings
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT=465
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER='paygo@gmail.com'
-EMAIL_HOST_PASSWORD='R2jSidnt8E3E'
-RECIPIENT_ADDRESS='youngtechbro@gmail.com'
-DEFAULT_FROM_EMAIL='paygo@gmail.com'
+# EMAIL_HOST='smtp.gmail.com'
+# EMAIL_PORT=465
+# EMAIL_USE_TLS=True
+# EMAIL_HOST_USER='paygo@gmail.com'
+# EMAIL_HOST_PASSWORD='R2jSidnt8E3E'
+# RECIPIENT_ADDRESS='youngtechbro@gmail.com'
+# DEFAULT_FROM_EMAIL='paygo@gmail.com'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = 'benjaminparish6@gmail.com'  
+EMAIL_HOST_PASSWORD = 'oqsehledopvxwakx'  
+DEFAULT_FROM_EMAIL = 'benjaminparish6@gmail.com'  
+
 
 # EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
 

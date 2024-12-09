@@ -25,7 +25,8 @@ urlpatterns = [
     path('insurers/<slug:store_slug>/products/', views.StoreProductList.as_view(), name='store-product-list'),
 
     path('auth/register/', views.RegisterView.as_view(), name='register'),
-    path('auth/login/', views.LoginView.as_view(), name='login'),
+    path('auth/login/', views.LoginView.as_view(), name='login'), 
+    path('auth/logout/', views.LogoutView.as_view(), name='login'),
     path('auth/request-password-reset-email/', views.RequestPasswordResetView.as_view(), name='request-password-reset'),
     path('auth/reset-password/protected/', views.ProtectedResetPasswordAPIView.as_view(), name='reset-password'),
     path('auth/reset-password/confirm', views.custom_password_reset_confirm, name='password_reset_confirm'),

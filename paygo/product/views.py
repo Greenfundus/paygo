@@ -995,16 +995,6 @@ class CommunityDetailView(generics.RetrieveUpdateDestroyAPIView):
         return super().delete(request, *args, **kwargs)
 
 
-
-# views.py
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.authtoken.models import Token
-from drf_yasg.utils import swagger_auto_schema
-from drf_yasg import openapi
-
 class LogoutView(APIView):
     permission_classes = [IsAuthenticated]
     
